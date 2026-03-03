@@ -459,7 +459,7 @@ class ResponsiveImagesUtility implements SingletonInterface
 
         // Convert srcset input to array
         if (!is_array($srcset)) {
-            $srcset = GeneralUtility::trimExplode(',', $srcset);
+            $srcset = GeneralUtility::trimExplode(',', (string)$srcset);
         }
 
         $images = [];
